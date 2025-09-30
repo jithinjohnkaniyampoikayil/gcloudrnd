@@ -35,7 +35,6 @@ RUN npm ci --omit=dev && npm cache clean --force
 
 # Copy built application
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
 
 # Set the correct permission
 RUN chown -R nextjs:nodejs /app
