@@ -35,10 +35,8 @@ const categorizeEnvVar = (key: string, value: string): EnvVar['category'] => {
 };
 
 const isCustomEnvVar = (key: string): boolean => {
-  const upperKey = key.toUpperCase();
-  
-  // For now, only show DATABASE_URL
-  return upperKey === 'DATABASE_URL';
+  // Since we're pre-filtering in the page component, show all passed variables
+  return true;
 };
 
 const isSecretVar = (key: string): boolean => {
