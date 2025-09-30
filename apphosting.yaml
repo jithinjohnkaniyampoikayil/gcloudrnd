@@ -4,4 +4,14 @@
 runConfig:
   # Increase this value if you'd like to automatically spin up
   # more instances in response to increased traffic.
-  maxInstances: 1
+  maxInstances: 3
+
+  # Environment variables for your Next.js app
+  env:
+    DATABASE_URL: "jithini"
+    NODE_ENV: "production"
+    DEBUG_MODE: "false"
+    APP_ENV: "firebase-apphosting"
+# Optional: Configure CPU and memory
+# cpu: 1
+# memory: "512Mi"
