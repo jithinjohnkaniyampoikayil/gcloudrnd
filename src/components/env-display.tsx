@@ -167,7 +167,7 @@ export default function EnvDisplay({ variables }: EnvDisplayProps) {
           EnvDisplay
         </CardTitle>
         <CardDescription className="text-lg">
-          Displaying DATABASE_URL environment variable. Found {allVars.length} variable{allVars.length !== 1 ? 's' : ''}.
+          Displaying environment variables from process.env. Found {allVars.length} variable{allVars.length !== 1 ? 's' : ''}.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -206,7 +206,7 @@ export default function EnvDisplay({ variables }: EnvDisplayProps) {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               type="text"
-              placeholder="Filter DATABASE_URL variable"
+              placeholder="Filter environment variables"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
               className="pl-10 text-base"
