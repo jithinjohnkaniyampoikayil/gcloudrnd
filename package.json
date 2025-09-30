@@ -10,7 +10,7 @@
     "export": "NODE_ENV=production next build && next export",
     "deploy": "npm run build && firebase deploy",
     "deploy:appengine": "npm run build && gcloud app deploy",
-    "deploy:cloudrun": "gcloud run deploy gcloudrnd --source . --platform managed --region europe-west6 --allow-unauthenticated",
+    "deploy:cloudrun": "gcloud run deploy gcloudrnd --source . --platform managed --region europe-west6 --allow-unauthenticated ",
     "gcloud:login": "gcloud auth login",
     "gcloud:set-project": "gcloud config set project studio-7552925069-8e64f",
     "firebase:login": "firebase login",
