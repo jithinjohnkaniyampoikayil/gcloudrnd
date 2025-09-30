@@ -77,6 +77,11 @@ export default function EnvDisplay({ variables }: EnvDisplayProps) {
   const [showSecrets, setShowSecrets] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<'all' | EnvVar['category']>('all');
 
+  // Client-side debugging - this will show in browser console
+  console.log('EnvDisplay received variables:', variables);
+  console.log('Variables keys:', Object.keys(variables));
+  console.log('DATABASE_URL value:', variables.DATABASE_URL);
+
   const allVars: EnvVar[] = useMemo(() => {
     return Object.entries(variables)
       .filter(([key]) => isCustomEnvVar(key)) // Only show custom environment variables
@@ -171,6 +176,14 @@ export default function EnvDisplay({ variables }: EnvDisplayProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        {/* Debug Info */}
+        <div className="mb-4 p-3 bg-gray-100 rounded text-sm">
+          <strong>Debug Info:</strong><br/>
+          Raw variables received: {JSON.stringify(variables, null, 2)}<br/>
+          Keys: {Object.keys(variables).join(', ')}<br/>
+          DATABASE_URL: {variables.DATABASE_URL || 'undefined'}
+        </div>
+
         {/* Category Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mb-6">
           {categoryStats.map(({ category, count, secretCount }) => (
