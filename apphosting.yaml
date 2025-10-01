@@ -8,10 +8,11 @@ runConfig:
 
   # Environment variables for your Next.js app - PRODUCTION
   env:
-    DATABASE_URL: "postgresql://prod-server:5432/production_db"
-    NODE_ENV: "development1"
-    DEBUG_MODE: "false"
-    APP_ENV: "firebase-apphosting-production"
+    - variable: DATABASE_URL
+      value: kjihijnijiji
+      availability:
+        - BUILD
+        - RUNTIME
 # Optional: Configure CPU and memory for production
 # cpu: 2
 # memory: "1Gi"

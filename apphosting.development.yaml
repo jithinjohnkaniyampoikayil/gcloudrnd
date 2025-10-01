@@ -8,10 +8,11 @@ runConfig:
 
   # Environment variables for your Next.js app
   env:
-    DATABASE_URL: "jithini"
-    NODE_ENV: "production"
-    DEBUG_MODE: "false"
-    APP_ENV: "firebase-apphosting"
+    - variable: DATABASE_URL
+      value: kjihijnijiji
+      availability:
+        - BUILD
+        - RUNTIME
 # Optional: Configure CPU and memory
 # cpu: 1
 # memory: "512Mi"
