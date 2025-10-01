@@ -1,0 +1,17 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 10
+
+  # Environment variables for your Next.js app - PRODUCTION
+  env:
+    DATABASE_URL: "postgresql://prod-server:5432/production_db"
+    NODE_ENV: "development1"
+    DEBUG_MODE: "false"
+    APP_ENV: "firebase-apphosting-production"
+# Optional: Configure CPU and memory for production
+# cpu: 2
+# memory: "1Gi"
