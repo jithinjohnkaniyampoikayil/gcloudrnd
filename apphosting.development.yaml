@@ -9,7 +9,17 @@ runConfig:
   # Environment variables for your Next.js app
   env:
     - variable: DATABASE_URL
-      value: "development url"
+      value: "development-url-from-apphosting-dev"
+      availability:
+        - BUILD
+        - RUNTIME
+    - variable: NODE_ENV
+      value: "development"
+      availability:
+        - BUILD
+        - RUNTIME
+    - variable: DEBUG_MODE
+      value: "true"
       availability:
         - BUILD
         - RUNTIME

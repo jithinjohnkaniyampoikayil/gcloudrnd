@@ -15,6 +15,7 @@ export default function Home() {
     DATABASE_URL: process.env.DATABASE_URL || 'Not set',
     // Add some debugging info
     NODE_ENV: process.env.NODE_ENV || 'Not set',
+    DEBUG_MODE: process.env.DEBUG_MODE || 'Not set',
     PORT: process.env.PORT || 'Not set',
     HOSTNAME: process.env.HOSTNAME || 'Not set',
     _DEBUG_ALL_ENV_KEYS: Object.keys(process.env).join(', '),
