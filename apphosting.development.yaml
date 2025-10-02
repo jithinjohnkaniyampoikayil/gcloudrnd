@@ -9,7 +9,7 @@ runConfig:
   # Environment variables for your Next.js app
   env:
     - variable: DATABASE_URL
-      value: kjihijnijiji
+      value: "development url"
       availability:
         - BUILD
         - RUNTIME
